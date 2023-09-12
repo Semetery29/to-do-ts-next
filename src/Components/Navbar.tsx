@@ -7,9 +7,9 @@ const Navbar = () => {
   console.log("navbar " + todosFilter);
   return (
     <nav>
-      <Link href="/">All</Link>
-      <Link href="/?todos=active">Active</Link>
-      <Link href="/?todos=completed">Completed</Link>
+      <Link href="/" className={ todosFilter === null ? "active" : ""}>All</Link>
+      <Link href="/?todos=active" className={ todosFilter === "active" ? "active" : ""}>Active</Link>
+      <Link href="/?todos=completed" className={ todosFilter === "completed" ? "active" : ""}>Completed</Link>
     </nav>
   );
 };
